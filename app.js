@@ -617,7 +617,7 @@ function applyAction(room, action){
       return;
     }
 
-    table.lastCombo = { type: combo.type, len: combo.len, highVal: combo.highVal, suit: combo.suit, cards, ownerUid: uid };
+    table.lastCombo = { type: combo.type, len: combo.len, highVal: combo.highVal, suit: combo.suit || null, cards, ownerUid: uid };
     table.freeLead = false;
     // passSet carries over within the same trick — anyone who already
     // passed stays skipped until the trick resets (auto-pass house rule)
